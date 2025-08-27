@@ -1,0 +1,738 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+/*##header##*/
+header h1 i{
+    color: #FFD700
+}
+header >div h1 {
+    color: white;
+    position: relative;
+    font-size: 60px;
+
+}
+header h1 :after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background-color:#FFD700 ;
+    transition: width 0.5s;
+
+}
+header h1 :hover::after{
+    width: 100%;
+}
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 27px;
+}
+
+header li {
+    text-decoration: none;
+    font-size: 25px;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+header li a{
+    color: white !important;
+    position: relative;
+}
+header li a::after{
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    transform: scaleX(0);
+    background-color:  #FFD700;
+    transition:  0.5s;
+
+
+}
+header li a:hover::after{
+    transform: scaleX(1);
+
+}
+.dropdown-item:hover{
+    color: black !important;
+
+}
+header button{
+    border: 3px solid white;
+    background-color: transparent;
+    color: white;
+    border-radius: 10px;
+    padding:5px;
+}
+header button:hover{
+    background-color:#FFD700;
+    color: black;
+    border: 3px solid #FFD700;
+}
+@media (max-width: 650px) and (min-width: 300px) {
+    header h1 {
+        font-size: 30px;
+    }
+    header li a {
+        font-size: 25px !important;
+    }
+    header button {
+        font-size: 20px;
+    }
+}
+/*****************************************************************************************************/
+/**section 1**/
+#Home {
+    width: 100%;
+    height: 100vh;
+    padding-top: 100px;
+}
+.carousel {
+    width: 100%;
+    height: 100%;
+}
+.carousel-inner {
+    height: 100%;
+}
+.carousel-item {
+    height: 100%;
+}
+.carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    object-position: center;
+}
+.carousel-caption {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 40px 20px !important; ;
+    border-radius: 10px;
+}
+
+.carousel-caption p{
+    color: white;
+    font-size: 25px;
+
+
+
+}
+
+
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 10%;
+}
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: #FFD700;
+}
+.carousel-indicators [data-bs-target] {
+    background-color: #FFD700;
+}
+
+
+@media (max-width: 768px) {
+    #Home {
+        height: 60vh;
+    }
+    .carousel-caption {
+        display: block !important;
+        font-size: 14px;
+    }
+    .carousel-caption h5 {
+        font-size: 16px;
+    }
+    .carousel-caption p {
+        font-size: 12px;
+    }
+    .carousel-item img {
+        width: 90%;
+        height: 90%;
+        object-fit:none;
+        object-position: center;
+    }
+}
+/*****************************************************************************************************/
+/**section 2 class="home2"**/
+
+.home2{
+    padding: 40px 30px;
+    text-align: center;
+    background-color: #ccc;
+
+}
+.home2 h1 {
+    font-size: 50px;
+    position: relative;
+    padding: 20px 20px 5px 20px;
+
+}
+.home2 h1 i{
+    font-size: 50px;
+    color: red;
+
+}
+
+.home2 h1::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    transform: scaleX(0);
+    background-color:  #FFD700;
+    transition:  0.5s ease-in-out;
+    transform-origin: center;
+
+
+}
+.home2 h1:hover::after{
+    transform: scaleX(0.15);
+}
+/*****/
+
+.container >div {
+    width: 100%;
+    padding: 50px 30px 50px 30px;
+    height: 100%;
+}
+.col-md-8{
+    object-fit:contain;
+    border-radius: 20px;
+}
+
+.col-md-6{
+    object-fit:contain;
+    border-radius: 20px;
+
+}
+
+
+
+.img-box {
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.img-box:hover {
+    transform: translateY(-10px);
+
+
+}
+
+
+
+.img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+    transition: transform 0.3s ease;
+}
+
+.img-box:hover img {
+    transform: scale(1.05);
+}
+
+
+.offer_link {
+    position: absolute;
+    bottom: 5px;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    padding: 15px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 30px;
+    background: #FFD700;
+    color: #000000;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.img-box:hover .offer_link {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(-50%, -50%) scale(1.05);
+}
+
+
+/*****************************************************************************************************/
+/*section3  fashion_policy*/
+
+.fashion_policy {
+    padding: 80px 0;
+    position: relative;
+    overflow: hidden;
+    background:linear-gradient(45deg,#FFD700, #000000);
+}
+
+.container {
+    position: relative;
+    z-index: 2;
+    max-width: 1200px;
+}
+
+
+
+.fashion_policy_item {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    padding: 40px 30px;
+    text-align: center;
+    height: 280px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+.fashion_policy_item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+    transition: left 0.6s;
+}
+
+.fashion_policy_item:hover {
+    transform: translateY(-15px) scale(1.05);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    background: rgba(255, 255, 255, 1);
+}
+
+.fashion_policy_item:hover::before {
+    left: 100%;
+}
+
+.item_icon {
+    margin-bottom: 25px;
+    position: relative;
+}
+
+.item_icon span {
+    width: 90px;
+    height: 90px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    color: white;
+    transition: all 0.4s ease;
+    position: relative;
+    box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4);
+}
+
+.fashion_policy_item:hover .item_icon span {
+    transform: rotate(360deg) scale(1.1);
+    box-shadow: 0 12px 30px rgba(102, 126, 234, 0.6);
+}
+
+.item_icon span::after {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 50%;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.fashion_policy_item:hover .item_icon span::after {
+    opacity: 0.3;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 0.3;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 0.1;
+    }
+    100% {
+        transform: scale(1.2);
+        opacity: 0;
+    }
+}
+
+.item_content h3 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+}
+
+.fashion_policy_item:hover .item_content h3 {
+    color: #667eea;
+    transform: scale(1.05);
+}
+
+.item_content p {
+    color: #666;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 0;
+    transition: all 0.3s ease;
+}
+
+.fashion_policy_item:hover .item_content p {
+    color: #555;
+    transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .section-title h2 {
+        font-size: 2.5rem;
+    }
+
+    .fashion_policy_item {
+        height: 250px;
+        padding: 30px 20px;
+        margin-bottom: 20px;
+    }
+
+    .item_icon span {
+        width: 70px;
+        height: 70px;
+        font-size: 2rem;
+    }
+
+    .item_content h3 {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .fashion_policy {
+        padding: 40px 0;
+    }
+
+    .fashion_policy_item {
+        height: 220px;
+        padding: 25px 15px;
+    }
+
+    .section-title h2 {
+        font-size: 2rem;
+    }
+}
+
+/* Animation on scroll */
+.fade-in-up {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease;
+}
+
+.fade-in-up.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.fashion_policy_item:nth-child(1) {
+    animation-delay: 0.1s;
+}
+.fashion_policy_item:nth-child(2) {
+    animation-delay: 0.2s;
+}
+.fashion_policy_item:nth-child(3) {
+    animation-delay: 0.3s;
+}
+.fashion_policy_item:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+
+
+/*****************************************************************************************************/
+    /*section4 picture*/
+.picture{
+    padding: 50px 100px;
+    background: #ccc;
+}
+
+.picture1  {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 0;
+
+
+}
+
+.picture1 h1{
+    font-size: 5rem;
+    font-weight: 750;
+    padding: 30px 0 10px 0 ;
+}
+
+
+.picture1 p{
+    font-size: 3rem;
+    font-weight: 250;
+    padding: 0 0 50px 0 ;
+}
+
+
+.picture2  {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    padding: 50px 0;
+
+
+
+}
+
+
+
+.picture2 h1{
+    font-size: 5rem;
+    font-weight: 750;
+    padding: 30px 0 10px 0 ;
+}
+
+
+.picture2 p{
+    font-size: 3rem;
+    font-weight: 250;
+    padding: 0 0 50px 0 ;
+
+}
+
+@media (max-width:1350px) {
+    .picture{
+        padding: 50px 30px;
+        background: #ccc;
+    }
+    .picture1  {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: 50px 0;
+    }
+    .picture2  {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 30px;
+        flex-wrap: wrap;
+        padding: 50px 0;
+
+    }
+
+}
+
+
+/*****************************************************************************************************/
+
+
+
+
+
+.most {
+    padding: 60px 0 100px 0;
+    overflow: hidden;
+    background: #ccc;
+}
+
+.most h1 {
+    font-size: 50px;
+    text-align: center;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.most h1::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    transform: scaleX(0);
+    background-color: #FFD700;
+    transition: 0.5s ease-in-out;
+    transform-origin: center;
+}
+
+.most h1:hover::after {
+    transform: scaleX(0.25);
+}
+
+.most_img {
+    display: flex;
+    gap: 30px;
+    width: max-content;
+    animation: scroll 40s linear infinite;
+}
+
+.most_img img {
+    width: 300px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+@keyframes scroll {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+
+
+
+/*****************************************************************************************************/
+/*footer*/
+
+
+
+
+.bottom1 {
+    padding: 100px 0;
+    background: rgb(18, 17, 17);
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    gap: 50px;
+}
+
+.b1 {
+    text-align: center;
+}
+.b1 h1 {
+    font-size: 3rem;
+    color: white;
+}
+.b1 h1 i {
+    font-size: 3rem;
+    color: #FFD700;
+}
+
+
+.b2, .b3, .b4 {
+    color: white;
+    min-width: 200px;
+}
+
+.b2 h2, .b3 h2, .b4 h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    padding: 0;
+}
+
+.b2 ul, .b3 ul, .b4 ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+}
+
+.b2 ul li, .b3 ul li, .b4 ul li {
+    cursor: pointer;
+    padding: 5px 0;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+
+
+
+/*******************************/
+.b4 span{
+    color: #a5a5a5;
+    padding-top: 20px;
+}
+.b4 span i{
+    padding: 10px ;
+    border-radius: 50%;
+    background-color: rgba(126, 125, 125, 0.76);
+    cursor: pointer;
+    font-size: 25px;
+    color: #ffffff;
+    margin: 30px 0 0 0;
+}
+.b4 span :hover{
+    background-color: #ffffff;
+    color: #000000;
+    border: 1px solid #000000;
+    box-shadow: 1px 1px 5px rgb(52, 255, 195);
+}
+
+
+
+
+
+.bottom2 {
+    background: #0d0c0c;
+    padding: 25px 0;
+    text-align: center;
+    color: #888;
+    border-top: 2px solid #333;
+    font-size: 1.1rem;
+    position: relative;
+}
+
+.bottom2::before {
+    content: "© 2025 Dragon Fashion. All rights reserved. | Made with ♥ by Dragon Team";
+    display: block;
+}
+
+.bottom2::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 100px;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #FFD700, transparent);
+    transform: translateX(-50%);
+}
+
+
+
+
